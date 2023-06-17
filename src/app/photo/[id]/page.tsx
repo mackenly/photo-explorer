@@ -11,7 +11,6 @@ type Props = {
 export default async function Image({ params }: Props) {
 	const id = params.id;
 	const photo: Photo = await getPhoto(id);
-	console.log(photo);
 	return (
 		<main className={styles.main}>
 			<p className={styles.photo_name}>

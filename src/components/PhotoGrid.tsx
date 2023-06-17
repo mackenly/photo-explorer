@@ -48,6 +48,12 @@ export default function PhotoGrid({ initialPhotos }: Props) {
 		// if user has scrolled to bottom of page, add more photos
 		if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
 			addPhotos();
+			// wait 1 second to prevent multiple requests
+			window.removeEventListener('scroll', handleScroll);
+			setTimeout(() => {
+				window.addEventListener('scroll', handleScroll);
+			}
+			, 1000);
 		}
 	}
 
