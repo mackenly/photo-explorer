@@ -21,3 +21,5 @@ type Photo = {
 type Photos = Photo[];
 
 export type { Photo, Photos };
+
+export const runtime = 'edge';

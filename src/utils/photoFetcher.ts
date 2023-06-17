@@ -32,3 +32,5 @@ export async function getPhoto(id: string): Promise<Photo> {
     }
     return {} as Photo;
 }
+
+export const runtime = 'edge';

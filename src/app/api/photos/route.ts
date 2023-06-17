@@ -21,3 +21,5 @@ export async function GET(request: Request) {
     const photos = await getPhotos(page);
     return new Response(JSON.stringify(photos));
 }
+
+export const runtime = 'edge';

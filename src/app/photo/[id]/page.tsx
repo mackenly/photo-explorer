@@ -51,3 +51,5 @@ export default async function Image({ params }: Props) {
 		</main>
 	);
 }
+
+export const runtime = 'edge';
